@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Toasts</title>
+		<link type="text/css" href="style.css" rel="stylesheet">
+	</head>
+	<body>
+		<p class="add">Add toast</p>
+		<ul class="toasts"></ul>
+		<script>
+			button = document.querySelector('.add');
+			toasts = document.querySelector('.toasts');
+			
+			function add() {
+				var newToast = document.createElement('li');
+				newToast.innerHTML = 'new message';
+				toasts.appendChild(newToast);
+			}
+
+			button.addEventListener('click', add);
+
+			toasts.addEventListener('webkitAnimationEnd', function (e) {
+				if (e.animationName == 'hide') {
+					toasts.removeChild(e.target);
+				}
+			});
+
+			toasts.addEventListener('animationend', function (e) {
+				if (e.animationName == 'hide') {
+					toasts.removeChild(e.target);
+				}
+			});
+		</script>
+	</body>
+</html>

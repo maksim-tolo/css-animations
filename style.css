@@ -1,0 +1,67 @@
+body {
+	padding: 0;
+	margin: 0;
+	background: #111111;
+}
+.add {
+	font-size: 20px;
+	margin: 5px;
+	color: white;
+	padding: 10px;
+	background: #333333;
+	display: inline-block;
+	cursor: pointer;
+	border-radius: 2px;
+	font-family: sans-serif;
+}
+.toasts {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	position: fixed;
+	right: 0;
+	bottom: 0;
+}
+li {
+	animation: display .5s cubic-bezier(.09,1.15,1,1.42), hide .5s 4s;
+	-webkit-animation: display .5s cubic-bezier(.09,1.15,1,1.42), hide .5s 4s;
+	font-family: sans-serif;
+	border-radius: 2px;
+	margin: 5px;
+	width: 200px;
+	padding: 10px;
+	background: #335588;
+	color: white;
+}
+@-webkit-keyframes display {
+  from {
+    transform: translateX(100%);
+	}
+  to {
+    transform: translateX(0%);
+	}
+}
+@keyframes display {
+  from {
+    transform: translateX(100%);
+	}
+  to {
+    transform: translateX(0%);
+	}
+}
+@keyframes hide {
+  from {
+    transform: translateX(0%);
+	}
+  to {  
+    transform: translateX(100%);
+	}
+}
+@-webkit-keyframes hide {
+ from {
+    transform: translateX(0%);
+	}
+  to {  
+    transform: translateX(100%);
+	}
+}
